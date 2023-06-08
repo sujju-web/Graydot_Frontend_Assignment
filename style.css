@@ -1,0 +1,67 @@
+/* CSS code styles the containers and draggable items. 
+   It uses flexbox to arrange the containers side by side and sets the dimensions, border, padding, and other properties here...*/
+
+.container {
+      display: flex;
+    }
+
+    .drag-container {
+      flex: 1;
+      width: 100px;
+      height: 200px;
+      border: 2px solid orangered;
+      padding: 10px;
+      overflow: auto;
+    }
+
+/* draggable items are represented by the "draggable" class. 
+  They have a fixed width, height, background color, border, and margin. 
+  They also have the "dragged" class, which is applied during drag and sets the opacity to 0.4.*/
+
+    .draggable {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background-color:blueviolet;
+      border: 1px solid #ccc;
+      cursor: move;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .dragged {
+      opacity: 0.4;
+/* the opscity property is used to specify the transparency of an element. */
+    }
+
+    .success-message {
+      color: green;
+     /*display: none;*/
+    }
+
+ /* CSS for desktop screens */
+.container {
+  width: 992px;
+  margin: 0 auto;
+  background-color: cyan;
+}
+
+/* CSS for tablet screens */
+
+   @media (max-width: 768px) { /*CSS includes media queries to make the layout responsive for different screen sizes.
+                                It adjusts the container width, padding, and other properties based on the screen width.*/
+ 
+  .container {
+    width: 100%;
+    padding: 20px;
+    background-color: green;
+  }
+}
+
+/* CSS for mobile screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    background-color: lightpink;
+  }
+}
